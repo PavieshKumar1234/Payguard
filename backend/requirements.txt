@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+motor
+httpx
+python-dotenv
+pytest
+pytest-asyncio
+google-genai

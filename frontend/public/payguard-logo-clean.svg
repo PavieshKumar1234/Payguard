@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280" width="280" height="280">
+  <defs>
+    <linearGradient id="payguard-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22D3EE;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="payguard-text-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F8FAFC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#22D3EE;stop-opacity:1" />
+    </linearGradient>
+    <filter id="soft-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Outer subtle ring -->
+  <circle cx="140" cy="140" r="128" fill="none" stroke="url(#payguard-gradient)" stroke-width="1.5" opacity="0.35"/>
+  
+  <!-- Inner subtle ring -->
+  <circle cx="140" cy="140" r="108" fill="none" stroke="#22D3EE" stroke-width="0.8" opacity="0.2"/>
+  
+  <!-- PayGuard symbol/mark (shield with check) -->
+  <g transform="translate(140, 85)">
+    <!-- Shield shape -->
+    <path d="M0,-42 C0,-42 35,-42 35,-12 C35,18 0,42 0,42 C0,42 -35,18 -35,-12 C-35,-42 0,-42 0,-42 Z" 
+          fill="url(#payguard-gradient)" opacity="0.95" filter="url(#soft-glow)"/>
+    <!-- Checkmark inside shield -->
+    <path d="M-10,0 L-2,10 L12,-12" 
+          fill="none" stroke="#07111F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- PAYGUARD wordmark -->
+  <text x="140" y="178" text-anchor="middle" font-family="'Space Grotesk', 'Inter', sans-serif" 
+        font-size="32" font-weight="700" letter-spacing="2.5" fill="url(#payguard-text-gradient)">
+    PAYGUARD
+  </text>
+  
+  <!-- Checkmark/wing symbol below name -->
+  <g transform="translate(140, 215)">
+    <path d="M-22,0 C-22,0 -8,12 0,20 C0,20 22,-12 22,-12" 
+          fill="none" stroke="url(#payguard-gradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+    <path d="M-18,2 C-18,2 -6,12 0,18 C0,18 18,-8 18,-8" 
+          fill="none" stroke="#22D3EE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+  </g>
+</svg>
